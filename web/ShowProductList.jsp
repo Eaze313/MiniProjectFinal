@@ -49,7 +49,7 @@
                 statement.close();
             }
             if (connection != null) {
-                connection.close();
+                ```````````````````````````````````````````````````````````````````````````````````````````````connection.close();
             }
         %>
     </table>
