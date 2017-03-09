@@ -12,6 +12,12 @@
     <title>$Title$</title>
   </head>
   <body>
+  <h1>Welcome to PHAT Sensations</h1>
+
+  <h2>Let us make your day Sweet!!!</h2>
+
+
+
   <a href="ShowProductList.jsp">View List</a>
   </body>
 </html>

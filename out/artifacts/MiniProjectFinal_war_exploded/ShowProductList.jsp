@@ -22,7 +22,7 @@
             "jdbc",
             "java1234");
     Statement statement = connection.createStatement();
-    ResultSet resultset = statement.executeQuery("select pname , category, price, photo from products");
+    ResultSet resultset = statement.executeQuery("select * from products");
 %>
 
 <table style="width:100%">
@@ -35,10 +35,12 @@
         </tr>
         <% while(resultset != null && resultset.next()){ %>
         <TR>
-    <td> <%= resultset.getString(1) %></td>
-    <td> <%= resultset.getString(2) %></td>
+    <td><a href="ProductDetail.jsp?ID=<%= resultset.getString(1) %>">
+        <%= resultset.getString(2) %>
+    </a></td>
     <td> <%= resultset.getString(3) %></td>
     <td> <%= resultset.getString(4) %></td>
+    <td> <%= resultset.getString(6) %></td>
         </TR>
 
         <% }
@@ -53,6 +55,12 @@
             }
         %>
     </table>
+View by Categories:
+    <a href="ShowProductCat.jsp?category=Bar">Candy Bars</a>
+    <a href="ShowProductCat.jsp?category=Chips">Chips</a>
+    <a href="ShowProductCat.jsp?category=Caramels">Caramels</a>
+    <a href="ShowProductCat.jsp?category=Nuts">Nuts</a>
+    <a href="ShowProductCat.jsp?category=Candy">Candy</a>
 
 </body>
 </html>
