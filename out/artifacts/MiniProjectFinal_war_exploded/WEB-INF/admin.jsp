@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: paperspace
-  Date: 3/9/2017
-  Time: 10:26 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.sql.*" %>
 <html>
@@ -31,16 +24,18 @@
             <th>Name</th>
             <th>Category</th>
             <th>>Price</th>
-            <th>Photo</th>
+            <th>Update/Delete</th>
         </tr>
         <% while(resultset != null && resultset.next()){ %>
         <TR>
-    <td><a href="ProductDetail.jsp?ID=<%= resultset.getString(1) %>">
-        <%= resultset.getString(2) %>
-    </a></td>
-    <td> <%= resultset.getString(3) %></td>
-    <td> <%= resultset.getString(4) %></td>
-    <td> <%= resultset.getString(6) %></td>
+            <td><a href="ProductDetail.jsp?ID=<%= resultset.getString(1) %>">
+                <%= resultset.getString(2) %>
+            </a></td>
+            <td> <%= resultset.getString(3) %></td>
+            <td> <%= resultset.getString(4) %></td>
+            <td><a href="delete.jsp?ID=<%= resultset.getString(1) %>">
+                Delete
+            </a></td>
         </TR>
 
         <% }
@@ -55,7 +50,8 @@
             }
         %>
     </table>
-View by Categories:
+    </table>
+    View by Categories:
     <a href="ShowProductCat.jsp?category=Bar">Candy Bars</a>
     <a href="ShowProductCat.jsp?category=Chips">Chips</a>
     <a href="ShowProductCat.jsp?category=Caramels">Caramels</a>

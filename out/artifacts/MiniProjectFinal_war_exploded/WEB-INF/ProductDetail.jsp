@@ -31,10 +31,10 @@
 
 <h1><%= resultset.getString(2) %></h1>
 
-<img src="<%= resultset.getString(6) %>"></a>
+<img src="<%= resultset.getString(6) %>"> <br>
 
-Price: <%= resultset.getString(4) %>
+Price: <%= resultset.getString(4) %> <br>
 
-Details: <%= resultset.getString(5) %>
+Details: <%= resultset.getString(5) %> 
 </body>
 </html>
