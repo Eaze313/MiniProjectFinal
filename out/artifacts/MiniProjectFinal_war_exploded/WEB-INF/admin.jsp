@@ -36,6 +36,9 @@
             <td><a href="delete.jsp?ID=<%= resultset.getString(1) %>">
                 Delete
             </a></td>
+            <td><a href="UpdateProduct.html?ID=<%= resultset.getString(1) %>">
+                Update
+            </a></td>
         </TR>
 
         <% }
